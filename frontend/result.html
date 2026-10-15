@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Wellness Snapshot — EchoMinds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="page-ready">
+
+<div class="app-shell">
+  <div class="sidebar-overlay"></div>
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <span class="brand__mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 3v2.2M12 18.8V21M4.5 12H3M21 12h-1.5M6.3 6.3l1.1 1.1M16.6 16.6l1.1 1.1M6.3 17.7l1.1-1.1M16.6 7.4l1.1-1.1"/></svg>
+      </span>
+      EchoMinds
+      <button class="sidebar-close icon-btn" style="margin-left:auto" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="student-dashboard.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Home
+      </a>
+      <a href="assessment.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        Today's Check-in
+      </a>
+      <a href="history.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+        Progress Journey
+      </a>
+      <a href="result.html" class="is-active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18M7 15l4-6 4 4 5-8"/></svg>
+        Wellness Snapshot
+      </a>
+      <div class="sidebar__section-label">Support</div>
+      <a href="faq.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2-3 4"/><path d="M12 17h.01"/></svg>
+        FAQ
+      </a>
+      <a href="contact.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Contact
+      </a>
+    </nav>
+    <div class="sidebar__footer">
+      <a href="profile.html" style="display:block">
+        <div class="sidebar__user">
+          <div class="table-avatar">AK</div>
+          <div><strong>Aarav Kumar</strong><span>Grade 11 · Student</span></div>
+        </div>
+      </a>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="topbar">
+      <div class="flex items-center gap-3">
+        <button class="sidebar-toggle icon-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div>
+          <h1>Your Wellness Snapshot</h1>
+          <div class="topbar__meta">From your check-in on 30 Jul 2026, 10:42 AM</div>
+        </div>
+      </div>
+      <div class="topbar__actions">
+        <a href="assessment.html" class="btn btn-secondary btn-sm">New Check-in</a>
+      </div>
+    </header>
+
+    <main class="dashboard-content">
+      <div class="assessment-shell" style="max-width:960px">
+
+        <div class="alert alert-info mt-2" data-reveal="up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+          <div>Thank you for sharing. Here's a gentle look at how you're doing — take it at your own pace.</div>
+        </div>
+
+        <!-- Snapshot summary -->
+        <div class="dash-grid grid-3 mt-6" data-reveal="up">
+          <div class="card card-lg text-center">
+            <h3 class="mt-2" style="margin-bottom:var(--space-5)">Wellness Meter</h3>
+            <div class="risk-gauge" data-percent="38">
+              <div class="risk-gauge__needle"></div>
+              <div class="risk-gauge__center"><strong>Doing well</strong><span>Right now</span></div>
+            </div>
+            <div class="chart-legend" style="justify-content:center">
+              <span><i style="background:var(--color-success)"></i>Doing well</span>
+              <span><i style="background:var(--color-warning)"></i>Needs care</span>
+              <span><i style="background:var(--color-danger)"></i>Needs support</span>
+            </div>
+          </div>
+
+          <div class="card card-lg text-center">
+            <h3 class="mt-2" style="margin-bottom:var(--space-5)">How Clearly We Understood</h3>
+            <div class="progress-ring" data-percent="92">
+              <svg viewBox="0 0 120 120">
+                <defs>
+                  <linearGradient id="ring-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2563eb"/>
+                    <stop offset="100%" stop-color="#14b8a6"/>
+                  </linearGradient>
+                </defs>
+                <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                <circle class="ring-fill" cx="60" cy="60" r="52"/>
+              </svg>
+              <div class="progress-ring__label"><strong>92%</strong><span>Understood</span></div>
+            </div>
+            <p class="text-sm text-secondary mt-4">How clearly your check-in came through</p>
+          </div>
+
+          <div class="card card-lg text-center">
+            <h3 class="mt-2" style="margin-bottom:var(--space-5)">Today's Summary</h3>
+            <div style="padding:var(--space-6) 0">
+              <div class="stat-tile__icon success" style="width:64px;height:64px;margin-inline:auto;margin-bottom:var(--space-4)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+              </div>
+              <span class="badge badge-success" style="font-size:var(--fs-sm);padding:0.5rem 1rem">You're doing well today</span>
+            </div>
+            <p class="text-sm text-secondary">Nothing here needs urgent attention. Keep checking in — it really helps.</p>
+          </div>
+        </div>
+
+        <!-- Emotions + Keywords -->
+        <div class="dash-grid grid-2 mt-6" data-reveal="up">
+          <div class="card">
+            <div class="card__head"><h3>Emotions We Noticed</h3></div>
+            <div class="chip-cloud">
+              <span class="chip emotion-hopeful">🙂 Hopeful · 44%</span>
+              <span class="chip emotion-tired">😴 Tired · 26%</span>
+              <span class="chip emotion-anxious">😟 A little anxious · 18%</span>
+              <span class="chip emotion-sad">😔 A little low · 12%</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__head"><h3>Words That Stood Out</h3></div>
+            <div class="chip-cloud">
+              <span class="chip">exam</span>
+              <span class="chip">dosti (friendship)</span>
+              <span class="chip">neend (sleep)</span>
+              <span class="chip">pressure</span>
+              <span class="chip">family</span>
+              <span class="chip">tension</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suggestions -->
+        <div class="card mt-6" data-reveal="up">
+          <div class="card__head"><h3>Suggestions for You</h3><p>Picked gently, just for what you shared today</p></div>
+          <div class="reco-card">
+            <div class="reco-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div>
+            <div><h5>Try a guided breathing exercise</h5><p>5 gentle minutes, made for pre-exam nerves.</p></div>
+          </div>
+          <div class="reco-card">
+            <div class="reco-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg></div>
+            <div><h5>Build a calmer bedtime routine</h5><p>A few small tips for winding down at night.</p></div>
+          </div>
+          <div class="reco-card">
+            <div class="reco-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <div><h5>Reach out to a friend or mentor</h5><p>Sharing how you feel can lighten the load.</p></div>
+          </div>
+        </div>
+
+        <!-- Gentle disclaimer -->
+        <div class="alert alert-warning mt-6" data-reveal="up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
+          <div>This Wellness Snapshot is a gentle AI-generated reflection, not a medical diagnosis. If you're ever struggling, please talk to a trusted adult or counsellor — you don't have to go through it alone.</div>
+        </div>
+
+        <div class="flex gap-3 mt-6" style="justify-content:center;flex-wrap:wrap">
+          <a href="student-dashboard.html" class="btn btn-secondary">Back to Home</a>
+          <a href="assessment.html" class="btn btn-primary">Check In Again</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="js/animations.js"></script>
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

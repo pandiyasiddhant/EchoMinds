@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — EchoMinds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  .login-page {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8) var(--space-6);
+    position: relative;
+    overflow: hidden;
+  }
+  .login-page::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(600px 400px at 10% 10%, rgba(37,99,235,0.1), transparent 60%),
+      radial-gradient(600px 400px at 90% 90%, rgba(20,184,166,0.1), transparent 60%),
+      radial-gradient(500px 380px at 50% 100%, rgba(251,191,36,0.08), transparent 60%);
+    z-index: -1;
+  }
+  .login-wrap { width: 100%; max-width: 940px; }
+  .login-head { text-align: center; margin-bottom: var(--space-10); }
+  .login-head .brand { justify-content: center; margin-bottom: var(--space-6); display: inline-flex; }
+  .login-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+  .role-card {
+    background: var(--color-surface);
+    border: 1.5px solid var(--color-border-soft);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    cursor: pointer;
+    transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base);
+  }
+  .role-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(37,99,235,0.25); }
+  .role-card__icon {
+    width: 60px; height: 60px;
+    border-radius: var(--radius-md);
+    display: grid; place-items: center;
+    background: var(--gradient-brand);
+    box-shadow: var(--shadow-glow);
+    margin-bottom: var(--space-6);
+  }
+  .role-card__icon svg { width: 28px; height: 28px; color: #fff; }
+  .role-card h3 { font-size: var(--fs-xl); margin-bottom: var(--space-3); }
+  .role-card p { color: var(--color-text-secondary); font-size: var(--fs-sm); margin-bottom: var(--space-6); min-height: 66px; }
+  .role-card ul { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-8); }
+  .role-card li { display: flex; align-items: center; gap: var(--space-2); font-size: var(--fs-xs); color: var(--color-text-secondary); }
+  .role-card li svg { width: 15px; height: 15px; color: var(--color-success); flex-shrink: 0; }
+  .login-footnote { text-align: center; margin-top: var(--space-10); font-size: var(--fs-sm); color: var(--color-text-secondary); }
+  .login-footnote a { color: var(--color-primary); font-weight: 600; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-sm); font-weight: 600; color: var(--color-text-secondary); position: absolute; top: var(--space-6); left: var(--space-6); }
+  .back-link svg { width: 16px; height: 16px; }
+</style>
+</head>
+<body class="page-ready">
+
+<a href="index.html" class="back-link">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  Back to home
+</a>
+
+<button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode" style="position:absolute;top:var(--space-6);right:var(--space-6)">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+</button>
+
+<main class="login-page">
+  <div class="login-wrap">
+    <div class="login-head fade-in-up">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 3v2.2M12 18.8V21M4.5 12H3M21 12h-1.5M6.3 6.3l1.1 1.1M16.6 16.6l1.1 1.1M6.3 17.7l1.1-1.1M16.6 7.4l1.1-1.1"/></svg>
+        </span>
+        EchoMinds
+      </a>
+      <h1 style="font-size:var(--fs-2xl);margin-bottom:var(--space-3)">Good to see you 👋</h1>
+      <p style="color:var(--color-text-secondary)">Let's understand how you're doing. Choose how you'd like to continue.</p>
+    </div>
+
+    <div class="login-cards">
+      <article class="role-card fade-in-up delay-1" data-role-card>
+        <div class="role-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Continue as Student</h3>
+        <p>Speak or write freely, get a gentle Wellness Snapshot, and watch your progress journey grow — completely private.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Your own check-in history</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Suggestions picked just for you</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Support resources, always nearby</li>
+        </ul>
+        <a href="student-dashboard.html" class="btn btn-primary btn-block">
+          Continue as Student
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="role-card fade-in-up delay-2" data-role-card>
+        <div class="role-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V8l8-4 8 4v12M9 20v-6h6v6"/></svg>
+        </div>
+        <h3>Continue as School / Counsellor</h3>
+        <p>See how your students are really doing, notice who could use a check-in, and offer support sooner.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> A calm, school-wide overview</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Gentle wellness reports</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Private, role-based access</li>
+        </ul>
+        <a href="school-dashboard.html" class="btn btn-secondary btn-block">
+          Continue as School / Counsellor
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+    </div>
+
+    <p class="login-footnote fade-in-up delay-3">
+      By continuing, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>. Need help? <a href="contact.html">Contact us</a>.
+    </p>
+  </div>
+</main>
+
+<script src="js/animations.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
