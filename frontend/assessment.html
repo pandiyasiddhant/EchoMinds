@@ -114,6 +114,72 @@
               <span id="char-count">0 / 1200</span>
             </div>
 
+            <!-- Live AI Model Prediction -->
+            <section class="live-analysis card" id="live-analysis" aria-live="polite">
+              <div class="card__head">
+                <div>
+                  <h3>Live Model Prediction</h3>
+                  <p>Experimental predictions from your trained EchoMinds model</p>
+                </div>
+                <span class="badge badge-neutral" id="prediction-status">Waiting for input</span>
+              </div>
+
+              <p class="live-analysis__empty" id="prediction-empty">
+                Start writing to see your model's predictions here.
+              </p>
+
+              <div id="prediction-results" hidden>
+                <div class="prediction-row">
+                  <div class="prediction-label"><span>Normal</span><strong id="pred-normal-value">0%</strong></div>
+                  <div class="prediction-track"><div class="prediction-fill prediction-normal" id="pred-normal-bar"></div></div>
+                </div>
+                <div class="prediction-row">
+                  <div class="prediction-label"><span>Stress</span><strong id="pred-stress-value">0%</strong></div>
+                  <div class="prediction-track"><div class="prediction-fill prediction-stress" id="pred-stress-bar"></div></div>
+                </div>
+                <div class="prediction-row">
+                  <div class="prediction-label"><span>Severe</span><strong id="pred-severe-value">0%</strong></div>
+                  <div class="prediction-track"><div class="prediction-fill prediction-severe" id="pred-severe-bar"></div></div>
+                </div>
+                <p class="live-analysis__result" id="prediction-summary"></p>
+              </div>
+            </section>
+
+            <!-- Live Writing Insights -->
+            <section class="live-analysis card" id="writing-insights">
+              <div class="card__head">
+                <div>
+                  <h3>Writing Insights</h3>
+                  <p>Language-based observations from your reflection</p>
+                </div>
+                <span class="badge badge-neutral">Text insights</span>
+              </div>
+
+              <div class="insight-group">
+                <h4>Emotional keywords</h4>
+                <div id="insight-keywords" class="insight-tags">
+                  <span class="text-secondary">Your keywords will appear here.</span>
+                </div>
+              </div>
+
+              <div class="insight-group">
+                <h4>Observed themes</h4>
+                <p id="insight-themes" class="text-secondary">Waiting for your reflection.</p>
+              </div>
+
+              <div class="insight-group">
+                <h4>A gentle suggestion</h4>
+                <p id="insight-suggestion" class="text-secondary">
+                  Take your time. There is no right or wrong way to express yourself.
+                </p>
+              </div>
+
+              <p class="live-analysis__disclaimer">
+                Writing insights are based on language patterns and are not clinical assessments.
+              </p>
+            </section>
+
+
             <div class="assessment-prompts">
               <span class="text-xs text-secondary" style="align-self:center">Need a starting point?</span>
               <button type="button" data-prompt="Aaj kal padhai ka bahut pressure feel ho raha hai, dost bhi busy rehte hain...">Exam pressure</button>

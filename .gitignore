@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# Node dependencies
+node_modules/
+
+# System files
+.DS_Store
+
+# Logs
+*.log
+
+# Local backups
+*.bak
+*.backup
+*.voice-backup
+
+# Keep ML model weights tracked through Git LFS
