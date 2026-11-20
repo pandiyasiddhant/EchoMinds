@@ -108,11 +108,16 @@
         </div>
       </section>
 
-      <!-- Daily quote -->
-      <section class="card mt-6" data-reveal="up" style="background:var(--gradient-panel);border:none">
-        <div class="flex items-center gap-4">
-          <div class="stat-tile__icon" style="background:var(--color-surface)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div>
-          <p style="font-style:italic;color:var(--color-text)">"Remember to be kind to yourself — you're doing better than you think."</p>
+      <!-- Daily reminder -->
+      <section class="daily-reminder" data-reveal="up" aria-label="Daily wellness reminder">
+        <div class="daily-reminder__mark" aria-hidden="true">“</div>
+        <div class="daily-reminder__content">
+          <span class="daily-reminder__eyebrow">A GENTLE REMINDER</span>
+          <p>Remember to be kind to yourself — you're doing better than you think.</p>
+          <span class="daily-reminder__footer">
+            <span class="daily-reminder__dot"></span>
+            One moment at a time
+          </span>
         </div>
       </section>
 

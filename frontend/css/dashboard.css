@@ -359,3 +359,105 @@
 .analyze-steps li.is-active .step-dot { border-color: var(--color-primary); }
 .analyze-steps li.is-done .step-dot { border-color: var(--color-success); background: var(--color-success); }
 .analyze-steps li.is-done .step-dot svg { width: 11px; height: 11px; color: #fff; }
+
+/* ---------- Daily wellness reminder ---------- */
+
+.daily-reminder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 142px;
+  margin-top: 24px;
+  padding: 26px 34px;
+  overflow: hidden;
+  border: 1px solid rgba(96, 165, 250, 0.16);
+  border-radius: 24px;
+  background: linear-gradient(110deg, #172641 0%, #192b46 55%, #172b3d 100%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.daily-reminder__mark {
+  flex-shrink: 0;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(59, 130, 246, 0.13);
+  color: #60a5fa;
+  font-family: Georgia, serif;
+  font-size: 76px;
+  line-height: 1;
+  padding-top: 18px;
+}
+
+.daily-reminder__content {
+  position: relative;
+  z-index: 1;
+}
+
+.daily-reminder__eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  color: #60a5fa;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.daily-reminder__content p {
+  max-width: 760px;
+  color: #f1f5f9;
+  font-size: clamp(16px, 1.5vw, 21px);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.daily-reminder__footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.daily-reminder__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+}
+
+.daily-reminder__decoration {
+  position: absolute;
+  right: 35px;
+  top: 12px;
+  color: rgba(96, 165, 250, 0.12);
+  font-size: 100px;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .daily-reminder {
+    min-height: 0;
+    gap: 15px;
+    padding: 22px 18px;
+    border-radius: 19px;
+  }
+
+  .daily-reminder__mark {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    font-size: 58px;
+    padding-top: 14px;
+  }
+
+  .daily-reminder__decoration {
+    right: 12px;
+    font-size: 65px;
+  }
+}
